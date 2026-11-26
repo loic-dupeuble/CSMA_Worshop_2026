@@ -72,7 +72,7 @@ pip install .
 
 ## Documentation
 
-Full documentation is available at [https://loic-dupeuble.github.io/beamsolve/](https://loic-dupeuble.github.io/beamsolve/).
+Full documentation is available at [https://loic-dupeuble.github.io/CSMA_Worshop_2026/](https://loic-dupeuble.github.io/CSMA_Worshop_2026/).
 
 ## License
 
