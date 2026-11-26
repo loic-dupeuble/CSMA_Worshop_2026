@@ -59,7 +59,45 @@ class FEMModel:
         self.K, self.M = self.reduced_matrices()
 
 
-    
+    def element_mass(self) -> np.ndarray:    
+        r"""
+        Return the elementary mass matrix for a beam element.
+
+        Returns
+        -------
+        Me : np.ndarray
+            The 4x4 elementary mass matrix.
+        """
+        L = self.Le
+        rhoA = self.beam.rho * self.beam.A
+        Me = np.array([
+            [156, 22*L, 54, -13*L],
+            [22*L, 4*L**2, 13*L, -3*L**2],
+            [54, 13*L, 156, -22*L],
+            [-13*L, -3*L**2, -22*L, 4*L**2]
+        ]) * (rhoA * L / 420)
+
+        return Me
+
+    def element_stiffness(self) -> np.ndarray:
+        r"""
+        Return the elementary stiffness matrix for a beam element.
+
+        Returns
+        -------
+        Ke : np.ndarray
+            The 4x4 elementary stiffness matrix.
+        """
+        L = self.Le
+        EI = self.beam.E * self.beam.I
+        Ke = np.array([
+            [12, 6*L, -12, 6*L],
+            [6*L, 4*L**2, -6*L, 2*L**2],
+            [-12, -6*L, 12, -6*L],
+            [6*L, 2*L**2, -6*L, 4*L**2]
+        ]) * (EI / L**3)
+
+        return Ke
 
     def assemble_global_matrix(self, Me) -> np.ndarray:
         r"""
