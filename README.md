@@ -65,14 +65,14 @@ pip install beamsolve
 Or install from the GitHub repository:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/beamsolve.git
+git clone https://github.com/loic-dupeuble/beamsolve.git
 cd beamsolve
 pip install .
 ```
 
 ## Documentation
 
-Full documentation is available at [https://YOUR_USERNAME.github.io/beamsolve/](https://YOUR_USERNAME.github.io/beamsolve/).
+Full documentation is available at [https://loic-dupeuble.github.io/beamsolve/](https://loic-dupeuble.github.io/beamsolve/).
 
 ## License
 
