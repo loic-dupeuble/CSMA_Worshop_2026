@@ -32,4 +32,4 @@ requires-python = ">=3.8"
 [project.urls]
 Homepage = "https://github.com/Vince_ECN/beamsolve"
 Repository = "https://github.com/Vince_ECN/beamsolve"
-Documentation = "https://Vince_ECN.github.io/beamsolve/"
+Documentation = "https://loic-dupeuble.github.io/CSMA_Worshop_2026/"
