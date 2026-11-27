@@ -8,3 +8,4 @@ Below are practical examples of using ``beamsolve``.
 
    examples/clamped_free
    examples/simply_supported
+   examples/simply_supported_notebook
