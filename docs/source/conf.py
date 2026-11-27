@@ -1,6 +1,8 @@
 # Configuration file for the Sphinx documentation builder.
 import os
 import sys
+
+import myst_nb
 sys.path.insert(0, os.path.abspath('../../'))
 
 # Project information
@@ -20,6 +22,7 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
     'myst_parser',
+    'myst_nb',
 ]
 
 # Template configuration
@@ -29,6 +32,17 @@ exclude_patterns = []
 # Generate autosummary
 autosummary_generate         = True
 autosummary_imported_members = True
+
+autodoc_default_options = {
+    "members": True,
+    "show-inheritance": True,
+}
+
+autodoc_typehints = "description" # None
+autodoc_member_order = "bysource"
+
+# Configuration des notebooks
+nb_execution_mode = "off"
 
 # Intersphinx configuration
 intersphinx_mapping = {
@@ -40,14 +54,13 @@ intersphinx_mapping = {
 myst_enable_extensions = [
     "amsmath",
     "dollarmath",
+    "colon_fence",
+    "deflist",
 ]
 
 # Options for HTML output
-html_theme        = "sphinx_rtd_theme"
+html_theme        = "furo" # sphinx_rtd_theme
 html_static_path  = ['_static']
 html_theme_options = {
     'navigation_depth': 6,
 }
-
-# Types
-autodoc_typehints = "none"
