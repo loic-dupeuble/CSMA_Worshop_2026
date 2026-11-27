@@ -1,6 +1,14 @@
 {
  "cells": [
   {
+   "cell_type": "markdown",
+   "id": "43529b89",
+   "metadata": {},
+   "source": [
+    "# Notebook on the simply supported example"
+   ]
+  },
+  {
    "cell_type": "code",
    "execution_count": null,
    "id": "530f8cee",

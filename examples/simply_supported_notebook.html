@@ -6,7 +6,7 @@
 <link rel="index" title="Index" href="../genindex.html"><link rel="search" title="Search" href="../search.html"><link rel="next" title="Citation" href="../citation.html"><link rel="prev" title="Simply supported beam" href="simply_supported.html">
 
     <!-- Generated with Sphinx 9.1.1 and Furo 2025.12.19 -->
-        <title>&lt;no title&gt; - beamsolve 0.1.0 documentation</title>
+        <title>Notebook on the simply supported example - beamsolve 0.1.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -193,15 +193,16 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../readme.html">README</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../beam_theory.html">Euler-Bernoulli beam theory</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../architecture.html">Package architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installation guide</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../examples.html">Application examples</a><input aria-label="Toggle navigation of Application examples" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul>
+<li class="toctree-l1 current has-children"><a class="reference internal" href="../examples.html">Application examples</a><input aria-label="Toggle navigation of Application examples" checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><span class="icon"><svg><use href="#svg-arrow-right"></use></svg></span></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="clamped_free.html">Clamped-free beam</a></li>
 <li class="toctree-l2"><a class="reference internal" href="simply_supported.html">Simply supported beam</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Notebook on the simply supported example</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../citation.html">Citation</a></li>
@@ -244,7 +245,9 @@
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <div class="cell docutils container">
+          <section class="tex2jax_ignore mathjax_ignore" id="notebook-on-the-simply-supported-example">
+<h1>Notebook on the simply supported example<a class="headerlink" href="#notebook-on-the-simply-supported-example" title="Link to this heading">¶</a></h1>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#%% Imports de librairies</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
@@ -277,6 +280,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>FEM natural frequencies [Hz]:
+  Mode 1: 47.057 Hz
+  Mode 2: 188.228 Hz
+  Mode 3: 423.525 Hz
+  Mode 4: 752.988 Hz
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -287,6 +299,15 @@
 <span class="nb">print</span><span class="p">(</span><span class="s2">"</span><span class="se">\n</span><span class="s2">Analytical natural frequencies [Hz]:"</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">f</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sol_analytical</span><span class="o">.</span><span class="n">frequencies</span><span class="p">):</span>
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"  Mode </span><span class="si">{</span><span class="n">k</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">f</span><span class="si">:</span><span class="s2">.3f</span><span class="si">}</span><span class="s2"> Hz"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Analytical natural frequencies [Hz]:
+  Mode 1: 47.057 Hz
+  Mode 2: 188.227 Hz
+  Mode 3: 423.510 Hz
+  Mode 4: 752.907 Hz
 </pre></div>
 </div>
 </div>
@@ -301,6 +322,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Relative error FEM vs analytical [%]:
+  Mode 1: 0.0000 %
+  Mode 2: 0.0007 %
+  Mode 3: 0.0034 %
+  Mode 4: 0.0107 %
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -310,7 +340,17 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="../_images/977ed6692adbd7f1fa3c6c78dc2f906c0cdc2386bb6732237905243e2988cab6.png" src="../_images/977ed6692adbd7f1fa3c6c78dc2f906c0cdc2386bb6732237905243e2988cab6.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 640x480 with 0 Axes&gt;
+</pre></div>
 </div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(&lt;Figure size 640x480 with 0 Axes&gt;, [])
+</pre></div>
+</div>
+</div>
+</div>
+</section>
 
         </article>
       </div>
