@@ -3,7 +3,7 @@ README
 
 Project Home
 ------------
-The source codes for the **beamsolve** project are hosted on `GitHub <https://github.com/YOUR_USERNAME/beamsolve>`_.
+The source codes for the **beamsolve** project are hosted on `GitHub <https://github.com/loic-dupeuble/CSMA_Worshop_2026>`_.
 
 Overview
 --------
