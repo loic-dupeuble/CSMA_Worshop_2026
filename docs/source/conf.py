@@ -5,8 +5,8 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 # Project information
 project   = 'beamsolve'
-copyright = '2025, Your Name'
-author    = 'Your Name'
+copyright = '2025, Dupeuble Loïc'
+author    = 'Dupeuble Loïc'
 release   = '0.1.0'
 
 # General configuration
