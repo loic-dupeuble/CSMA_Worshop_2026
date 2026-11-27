@@ -21,9 +21,15 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
+    "sphinx_thebe",
     "myst_parser",
     'myst_nb',
 ]
+
+thebe_config = {
+    "repository_url": "https://github.com/loic-dupeuble/CSMA_Worshop_2026",
+    "repository_branch": "main",
+}
 
 # Template configuration
 templates_path   = ['_templates']
