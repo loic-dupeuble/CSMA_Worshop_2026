@@ -21,7 +21,7 @@ extensions = [
     'sphinx.ext.githubpages',
     'sphinx.ext.intersphinx',
     'sphinx_copybutton',
-    'myst_parser',
+    "myst_parser",
     'myst_nb',
 ]
 
@@ -42,7 +42,7 @@ autodoc_typehints = "description" # None
 autodoc_member_order = "bysource"
 
 # Configuration des notebooks
-nb_execution_mode = "off"
+nb_execution_mode = "force"
 
 # Intersphinx configuration
 intersphinx_mapping = {
@@ -61,6 +61,6 @@ myst_enable_extensions = [
 # Options for HTML output
 html_theme        = "furo" # sphinx_rtd_theme
 html_static_path  = ['_static']
-html_theme_options = {
-    'navigation_depth': 6,
-}
+# html_theme_options = {
+#     'navigation_depth': 6,
+# }
